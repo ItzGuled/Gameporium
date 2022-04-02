@@ -8,30 +8,33 @@ body {
         background: $backgroundColor;
         color: $textColor;
         font-family: $textFont;
-        font-size: 1.2rem;
-        line-height: 1.5;
-        margin: 0;
-        padding: 0;
     }
-header {
-        background-color: $secondaryColor;
+.site-header {
+        background: $secondaryColor;
         color: $textColor;
-        padding: 10px;
+        border-radius: 1rem;
+        padding: 1rem;
         text-align: center;
-        
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+            color: $accentColor;
+        }
     }
-.container {
+.game-container {
         flex-wrap: wrap;
         justify-content: center;
-        background-color: $secondaryColor;
+        background: $secondaryColor;
         color: $textColor;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 20px;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem;
     }
 footer {
-        background-color: $secondaryColor;
+        background: $secondaryColor;
+        font-weight: 200;
+        border-radius: 1rem;
         color: $textColor;
-        padding: 10px;
+        padding: .5rem;
         text-align: center;
     }
