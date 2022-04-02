@@ -16,9 +16,17 @@ body {
         padding: 1rem;
         text-align: center;
         .title {
-            font-size: 2em;
+            font-size: 4rem;
             font-weight: bold;
             color: $accentColor;
+            margin: 0 0 1rem;
+        }
+        .subtitle {
+            font-size: .5em;
+            font-weight: normal;
+            color: $textColor;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
     }
 .game-container {
@@ -29,6 +37,15 @@ body {
         border-radius: 1rem;
         padding: 1rem;
         margin: 1rem;
+        .game-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: $accentColor;
+        }
+        .game-description {
+            font-size: 2rem;
+            font-weight: lighter;
+        }
     }
 footer {
         background: $secondaryColor;
