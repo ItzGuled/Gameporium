@@ -1,0 +1,40 @@
+/*Global Vairables*/
+:root {
+    --background-color: #202634;
+    --secondary-color: #283044;
+    --accent-color: #5cd85a;
+    --text-color: #f5f5f5;
+    };
+    * {
+        color: var(--text-color);
+    }
+    body {
+        background-color: var(--background-color);
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        padding: 10px;
+        text-align: center;
+        
+    }
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+    }
+    footer {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        padding: 10px;
+        text-align: center;
+    }
