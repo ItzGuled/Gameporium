@@ -44,6 +44,10 @@ body {
   grid-area: login;
 }
 
+.login a {
+  text-decoration: none;
+}
+
 .game-container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
