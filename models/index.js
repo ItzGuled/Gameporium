@@ -20,12 +20,6 @@ User.hasMany(Comment, {
     onDelete: 'SET NULL'
   });
 
-  // Comment.belongsToMany(Rate, {
-  //   through: Rate,
-  //   as: 'rated_posts',
-  //   foreignKey: 'comment_id'
-  //  // onDelete: 'SET NULL'
-  // });
 
   Rate.belongsTo(User, {
     foreignKey: 'user_id',
