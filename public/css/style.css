@@ -42,10 +42,12 @@ body {
 
 .login {
   grid-area: login;
+  font-size: 1.5em;
 }
 
 .login a {
   text-decoration: none;
+  text-decoration: underline;
   color: #5cd85a;
 }
 

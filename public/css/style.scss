@@ -41,8 +41,10 @@ body {
     }
 .login {
     grid-area: login;
+    font-size: 1.5em;
     a {
         text-decoration: none;
+        text-decoration: underline;
         color: $accentColor;
     }
     ul {
