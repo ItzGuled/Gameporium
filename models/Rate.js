@@ -25,10 +25,19 @@ Rate.init(
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
-            //figure out how to make it 1-5
+            min: 1,
+            max: 5
           }
       },
-  },
+      comment_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'comment',
+          key: 'id'
+        }
+      },
+    },
   {
     sequelize,
     timestamps: true,
