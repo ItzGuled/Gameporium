@@ -46,6 +46,13 @@ body {
 
 .login a {
   text-decoration: none;
+  list-style: none;
+  color: #5cd85a;
+}
+
+.login li{
+  text-decoration: none;
+  list-style: none;
 }
 
 .game-container {
