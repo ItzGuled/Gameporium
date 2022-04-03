@@ -46,12 +46,10 @@ body {
 
 .login a {
   text-decoration: none;
-  list-style: none;
   color: #5cd85a;
 }
 
-.login li{
-  text-decoration: none;
+.login ul {
   list-style: none;
 }
 
@@ -86,5 +84,9 @@ footer {
   color: #f5f5f5;
   padding: .5rem;
   text-align: center;
+}
+
+footer .created-by {
+  color: #5cd85a;
 }
 /*# sourceMappingURL=style.css.map */
