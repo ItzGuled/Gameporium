@@ -1,48 +1,94 @@
-/*Global Vairables*/
-:root {
-  --background-color: #202634;
-  --secondary-color: #283044;
-  --accent-color: #5cd85a;
-  --text-color: #f5f5f5;
-}
-
-* {
-  color: var(--text-color);
-}
-
 body {
-  background-color: var(--background-color);
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
+  background: #202634;
+  color: #f5f5f5;
+  font-family: "Oswald", sans-serif;
 }
 
-header {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  padding: 10px;
+.site-header {
+  background: #283044;
+  color: #f5f5f5;
+  border-radius: 1rem;
+  padding: 1rem;
   text-align: center;
 }
 
-.container {
+.site-header .title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #5cd85a;
+  margin: 0 0 1rem;
+  grid-area: title;
+}
+
+.site-header .subtitle {
+  display: block;
+  font-size: .5em;
+  font-weight: normal;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 53em) {
+  .nav-bar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-areas: "empty title login";
+    gap: 1.5rem;
+  }
+}
+
+.login {
+  grid-area: login;
+  font-size: 1.5em;
+}
+
+.login a {
+  text-decoration: none;
+  text-decoration: underline;
+  color: #5cd85a;
+}
+
+.login ul {
+  list-style: none;
+}
+
+.game-container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
+  background: #283044;
+  color: #f5f5f5;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.game-container .game-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #5cd85a;
+}
+
+.game-container .game-description {
+  font-size: 2rem;
+  font-weight: lighter;
 }
 
 footer {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  padding: 10px;
+  background: #283044;
+  font-weight: 200;
+  border-radius: 1rem;
+  color: #f5f5f5;
+  padding: .5rem;
   text-align: center;
+}
+
+footer .created-by {
+  color: #5cd85a;
 }
 /*# sourceMappingURL=style.css.map */
