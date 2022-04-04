@@ -41,8 +41,14 @@ body {
     }
 .login {
     grid-area: login;
+    font-size: 1.5em;
     a {
         text-decoration: none;
+        text-decoration: underline;
+        color: $accentColor;
+    }
+    ul {
+        list-style: none;
     }
 }
 .game-container {
@@ -70,4 +76,7 @@ footer {
         color: $textColor;
         padding: .5rem;
         text-align: center;
+        .created-by {
+            color: $accentColor;
+        }
     }
