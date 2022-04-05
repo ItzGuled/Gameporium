@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Rate } = require("../../models");
 
 router.get("/", (req, res) => {
- Rate.findAll()
+  Rate.findAll()
     .then((rateData) => res.json(rateData))
     .catch((err) => {
       console.log(err);
