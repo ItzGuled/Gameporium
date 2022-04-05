@@ -1,40 +1,51 @@
 // import all models
-const Rate = require("./Rate");
+//const Rate = require("./Rate");
+//const Comment = require("./Comment");
+
 const User = require("./User");
-const Comment = require("./Comment");
+const Commentrate = require("./Commentrate")
 
-User.hasMany(Comment, {
+
+User.hasMany(Commentrate, {
+    foreignKey: "user_id"
+});
+
+Commentrate.belongsTo(User, {
   foreignKey: "user_id",
+  onDelete: "SET NULL"
 });
+// User.hasMany(Comment, {
+//   foreignKey: "user_id",
+// });
 
-Comment.belongsTo(User, {
-  foreignKey: "user_id",
-  onDelete: "SET NULL",
-});
+// Comment.belongsTo(User, {
+//   foreignKey: "user_id",
+//   onDelete: "SET NULL",
+// });
 
-User.belongsToMany(Comment, {
-  through: Rate,
-  as: "rated_posts",
-  foreignKey: "user_id",
-  onDelete: "SET NULL",
-});
+// User.belongsToMany(Comment, {
+//   through: Rate,
+//   as: "rated_posts",
+//   foreignKey: "user_id",
+//   onDelete: "SET NULL",
+// });
 
-Rate.belongsTo(User, {
-  foreignKey: "user_id",
-  onDelete: "SET NULL",
-});
+// Rate.belongsTo(User, {
+//   foreignKey: "user_id",
+//   onDelete: "SET NULL",
+// });
 
-Rate.belongsTo(Comment, {
-  foreignKey: "comment_id",
-  // onDelete: 'SET NULL'
-});
+// Rate.belongsTo(Comment, {
+//   foreignKey: "comment_id",
+//   // onDelete: 'SET NULL'
+// });
 
-User.hasMany(Rate, {
-  foreignKey: "user_id",
-});
+// User.hasMany(Rate, {
+//   foreignKey: "user_id",
+// });
 
-Comment.hasMany(Rate, {
-  foreignKey: "comment_id",
-});
+// Comment.hasOne(Rate, {
+//   foreignKey: "comment_id",
+// });
 
-module.exports = { User, Rate, Comment };
+module.exports = { User, Commentrate };
