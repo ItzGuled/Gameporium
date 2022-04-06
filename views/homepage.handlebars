@@ -7,6 +7,8 @@
             {{else}}
             <p>{{game.deck}}</p>
             {{/if}}  
+            <a href="/{{game.guid}}"style="text-decoration:none;"><h2 class="game-title">{{game.name}}</h2></a>
+            <p>{{game.deck}}</p>  
             <img src="{{game.image.icon_url}}" alt="Game image"/>               
         </div>
     {{/each}}    

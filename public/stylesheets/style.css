@@ -47,7 +47,6 @@ body {
 
 .login a {
   text-decoration: none;
-  text-decoration: underline;
   color: #5cd85a;
 }
 
@@ -78,6 +77,12 @@ body {
   font-size: 2rem;
   font-weight: lighter;
 }
+/* .game-container img {
+  height: auto; 
+  width: auto; 
+  max-width: 300px; 
+  max-height: 300px;
+} */
 
 footer {
   background: #283044;

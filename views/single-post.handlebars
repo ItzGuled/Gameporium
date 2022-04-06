@@ -1,5 +1,4 @@
-
-<div >        
+<div>        
     <div class="game-container">        
         <h2 class="game-title">{{game.name}}</h2>
         {{#if game.description}}
@@ -7,6 +6,12 @@
         {{else}}
         <p>{{game.deck}}</p>
         {{/if}}
-        <img src="{{game.image.medium_url}}" alt="Game image"/>               
-    </div>        
+        <img src="{{game.image.icon_url}}" alt="Game image"/>               
+    </div>  
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>      
 </div>
+{{#if loggedIn}}
+    <script src="/javascript/comment.js"></script>
+{{/if}}
