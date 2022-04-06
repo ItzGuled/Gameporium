@@ -6,12 +6,17 @@
         {{else}}
         <p>{{game.deck}}</p>
         {{/if}}
-        <img src="{{game.image.icon_url}}" alt="Game image"/>               
-    </div>  
-    <div>
-        <textarea name="comment-body"></textarea>
-    </div>      
+        <img src="{{game.image.icon_url}}" alt="Game image"/>        
 </div>
+<form class="comment-page">
+  <div>
+    <textarea name="comment-section"></textarea>
+  </div>
+  <div>
+    <button type="submit">Add Comment</button>
+  </div>
+</form>
+
 {{#if loggedIn}}
     <script src="/javascript/comment.js"></script>
 {{/if}}
