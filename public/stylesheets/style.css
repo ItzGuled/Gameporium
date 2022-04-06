@@ -76,8 +76,13 @@ body {
 .game-container .game-description {
   font-size: 2rem;
   font-weight: lighter;
- 
 }
+/* .game-container img {
+  height: auto; 
+  width: auto; 
+  max-width: 300px; 
+  max-height: 300px;
+} */
 
 footer {
   background: #283044;
