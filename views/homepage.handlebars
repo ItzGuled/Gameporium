@@ -2,8 +2,8 @@
     {{#each games as |game|}}
         <div class="game-container">        
             <a href="/{{game.guid}}"><h2 class="game-title">{{game.name}}</h2></a>
-            <p>{{game.deck}}</p>  
-            <img src="{{game.image.icon_url}}" alt="Game image"/>               
+            <p class="game-description">{{game.deck}}</p>  
+            <img src="{{game.image.icon_url}}" alt="Game image" class="game-image"/>               
         </div>
     {{/each}}    
 </div>
