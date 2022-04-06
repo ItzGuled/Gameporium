@@ -2,7 +2,11 @@
     {{#each games as |game|}}
         <div class="game-container">        
             <a href="/{{game.guid}}"><h2 class="game-title">{{game.name}}</h2></a>
-            <p>{{game.deck}}</p>  
+            {{#if game.description}}
+            {{{game.description}}}
+            {{else}}
+            <p>{{game.deck}}</p>
+            {{/if}}  
             <img src="{{game.image.icon_url}}" alt="Game image"/>               
         </div>
     {{/each}}    

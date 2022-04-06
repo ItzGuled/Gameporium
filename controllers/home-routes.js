@@ -15,15 +15,18 @@ router.get('/', (req,res) => {
             console.log(error);
         })
     
-})
+});
 
 // GET single game
-router.get('/:id', (req,res) => {
-    axios.get('https://www.giantbomb.com/api/game/'+ req.params.guid + '/?api_key=f69140845ff4d02155385c0b54aa36d12f51108f&format=json')
+router.get('/:guid', (req,res) => {
+    axios.get('https://www.giantbomb.com/api/game/'+ req.params.guid + '/?api_key=' + process.env.API_KEY + '&format=json')
         .then(function(response) {
             const game = response.data.results;
+            res.render('single-post', { game });
+        }).catch(function(error) {
+            console.log(error);
         })
-})
+});
 // login
 module.exports = router;
 
