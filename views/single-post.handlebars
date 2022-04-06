@@ -7,9 +7,14 @@
     </div>
   {{/each}}
 </div>
-<div>
-  <textarea name="comment-body"></textarea>
-</div>
+<form class="comment-page">
+  <div>
+    <textarea name="comment-section"></textarea>
+  </div>
+  <div>
+    <button type="submit">Add Comment</button>
+  </div>
+</form>
 
 {{#if loggedIn}}
   <script src="/javascript/comment.js"></script>
