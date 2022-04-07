@@ -9,6 +9,10 @@ body {
         color: $textColor;
         font-family: $textFont;
     }
+img {
+    max-width: 100%;
+    height: auto;
+}
 .site-header {
         background: $secondaryColor;
         color: $textColor;
@@ -44,7 +48,6 @@ body {
     font-size: 1.5em;
     a {
         text-decoration: none;
-        text-decoration: underline;
         color: $accentColor;
     }
     ul {
@@ -52,25 +55,42 @@ body {
     }
 }
 .game-container {
-        flex-wrap: wrap;
-        justify-content: center;
         background: $secondaryColor;
         color: $textColor;
         border-radius: 1rem;
         padding: 1rem;
         margin: 1rem;
+        width: auto;
+        min-height: 20rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "title image"
+                             "desc  image";
+        gap: 1rem;
         .game-title {
             font-size: 3rem;
             font-weight: bold;
             color: $accentColor;
+            grid-area: title;
         }
         .game-description {
             font-size: 2rem;
             font-weight: lighter;
+            grid-area: desc;
         }
         .game-image {
+            max-width: 25rem;
+            max-height: 15rem;
+            margin: 0.5rem 0.5rem;
+            grid-area: image;
             display: flex;
-            margin-right: 0;
+            justify-content: flex-end;
+            align-items: center;
+            img {
+                object-fit: contain;
+                max-height: 100%;
+            }
         }
     }
 footer {

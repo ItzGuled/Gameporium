@@ -4,6 +4,11 @@ body {
   font-family: "Oswald", sans-serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .site-header {
   background: #283044;
   color: #f5f5f5;
@@ -12,14 +17,13 @@ body {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-}
 .site-header .title {
   font-size: 4rem;
   font-weight: bold;
   color: #5cd85a;
   margin: 0 0 1rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: title;
 }
 
@@ -58,44 +62,64 @@ a {
 }
 
 .game-container {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: #283044;
   color: #f5f5f5;
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
+  width: auto;
+  min-height: 20rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "title image" "desc  image";
+  gap: 1rem;
 }
 
 .game-container .game-title {
   font-size: 3rem;
   font-weight: bold;
   color: #5cd85a;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
 }
 
 .game-container .game-description {
   font-size: 2rem;
   font-weight: lighter;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: desc;
 }
 
 .game-container .game-image {
+  max-width: 25rem;
+  max-height: 15rem;
+  margin: 0.5rem 0.5rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: image;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-button {
-  font-weight: lighter;
-  padding: 1%;
-  color: white;
-  background-color:#5cd85a;
-  border-radius: 8px;
+.game-container .game-image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100%;
 }
-
 
 footer {
   background: #283044;
