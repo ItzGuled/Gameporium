@@ -88,6 +88,24 @@ img {
   background: none;
 }
 
+.submitBtn, .submitBtn:focus {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1em;
+  color: #5cd85a;
+  cursor: pointer;
+}
+
+.submitBtn:hover, .submitBtn:focus:hover {
+  color: #f5f5f5;
+}
+
+.submitBtn button:active, .submitBtn:focus button:active {
+  outline: none;
+  background: none;
+}
+
 .game-container {
   background: #283044;
   color: #f5f5f5;

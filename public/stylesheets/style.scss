@@ -73,6 +73,21 @@ img {
         }
     }
 }
+.submitBtn, .submitBtn:focus {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: $accentColor;
+    cursor: pointer;
+    &:hover {
+        color: $textColor;
+    }
+    button:active {
+        outline: none;
+        background: none;
+    }
+}
 .game-container {
         background: $secondaryColor;
         color: $textColor;
