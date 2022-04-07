@@ -17,9 +17,12 @@
             <div class="nav-bar">
                 <a href="/"class="title">Gameporium🎮<span class="subtitle">User Game Review Website</span></a>
                 <div class="login">
-                    <ul>
-                        <a class="login-signup" href="/login">Login/Signup</a>                        
+                    <ul>                         
+                        {{#if loggedIn}}                      
                         <button id="logout">Logout</button>
+                        {{else}}
+                        <a class="login-signup" href="/login">Login/Signup</a> 
+                        {{/if}}
                     </ul>
                 </div>
             </div>

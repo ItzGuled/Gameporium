@@ -9,13 +9,15 @@
         <img src="{{game.image.medium_url}}" alt="Game image" />
     </div>
 
-    <div>
-    {{#each post}}
-        <div class="comment-container">        
-         <p> {{post.comment_text}} </p>
-         <p> {{post.rating}} </p>             
-        </div>
-    {{/each}}   
+    <div id="post-section">
+        <h2>Comments and Ratings</h2>
+        {{#each dbCommentData as |comment|}}        
+            <div class="comment-container">        
+                <p> {{comment.comment_text}} </p>
+                <span>Rating: {{comment.rating}}/5</span>
+                {{!-- <p> {{post.rating}} </p> --}}
+            </div> 
+        {{/each}}          
     </div>
 
     <div class="comment-container">
