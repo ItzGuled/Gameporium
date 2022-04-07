@@ -17,13 +17,14 @@ Commentrate.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      // allowNull: false,
       references: {
         model: 'user',
         key: 'id'
       }
     },
     game_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     rating: {
