@@ -89,6 +89,15 @@ a {
   margin-right: 0;
 }
 
+button {
+  font-weight: lighter;
+  padding: 1%;
+  color: white;
+  background-color:#5cd85a;
+  border-radius: 8px;
+}
+
+
 footer {
   background: #283044;
   font-weight: 200;
