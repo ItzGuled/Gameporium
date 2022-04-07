@@ -68,6 +68,10 @@ body {
             font-size: 2rem;
             font-weight: lighter;
         }
+        .game-image {
+            display: flex;
+            margin-right: 0;
+        }
     }
 footer {
         background: $secondaryColor;
