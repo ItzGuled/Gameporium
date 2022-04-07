@@ -50,7 +50,6 @@ a {
 
 .login a {
   text-decoration: none;
-  text-decoration: underline;
   color: #5cd85a;
 }
 
@@ -88,6 +87,15 @@ a {
   display: flex;
   margin-right: 0;
 }
+
+button {
+  font-weight: lighter;
+  padding: 1%;
+  color: white;
+  background-color:#5cd85a;
+  border-radius: 8px;
+}
+
 
 footer {
   background: #283044;
