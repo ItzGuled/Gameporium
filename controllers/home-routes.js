@@ -32,7 +32,7 @@ router.get('/:guid', (req,res) => {
     axios.get('https://www.giantbomb.com/api/game/'+ req.params.guid + '/?api_key=' + process.env.API_KEY + '&format=json')
         .then(function(response) {
             const game = response.data.results
-            Commentrate.findOne({
+            Commentrate.findAll({
                 where: {
                     game_id: req.params.guid
                 },
@@ -42,19 +42,17 @@ router.get('/:guid', (req,res) => {
                         model: User,
                         attributes: ['username']
                     }
-                ]
+                ],
+                raw: true
             }).then(function(dbCommentData) {
                 if(!dbCommentData) {
                     // res.status(404).json({ message: 'No post found with this id' });
                     res.render('single-post', { game, loggedIn: req.session.loggedIn });
                     return;
-                } else {
-                    // serialize the data
-                    const post = dbCommentData.get({ plain: true });                    
-                    res.render('single-post', { game, post, loggedIn: req.session.loggedIn });
-                }
-
-                
+                } else {                    
+                    console.log('we have comments!!', dbCommentData)                   
+                    res.render('single-post', { game, dbCommentData, loggedIn: req.session.loggedIn });
+                }                
             })
             
         }).catch(function(error) {
