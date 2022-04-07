@@ -146,6 +146,10 @@ img {
         font-weight: lighter;
         color: $textColor;
     }
+    a {
+        text-decoration: none;
+        color: $accentColor;
+    }
 }
 .comment-container {
     text-align: center;
