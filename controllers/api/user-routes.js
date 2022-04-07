@@ -44,7 +44,7 @@ router.get('/:id', (req,res) => {
 })
 
 // POST /api/users
-router.post('/', withAuth, (req,res) => {
+router.post('/', (req,res) => {
     // expects {username: <>, email: <>, passwprd: <>, genre_preference: <>}
     User.create({
         username: req.body.username,
@@ -57,7 +57,7 @@ router.post('/', withAuth, (req,res) => {
             req.session.username = dbUserData.username;            
             req.session.loggedIn = true;
 
-            res.json(dbUserData);
+            res.status(200).json();
         });
     }).catch(err => {
         console.log(err);
