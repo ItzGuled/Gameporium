@@ -12,8 +12,8 @@ router.get("/", (req, res) => {
 
 // GET a single rating and comment pair
 router.get('/:id', (req, res) => {
-//i'm wondering if instead of using findbypk we have to use game_id? Do i have to change something in the model to make that the foreign key?
- Commentrate.findByPk(req.params.id).then((CommentrateData) => {
+
+  Commentrate.findOne(req.params.id).then((CommentrateData) => {
     res.json(CommentrateData);
   });
 });

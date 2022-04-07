@@ -17,6 +17,15 @@ router.get('/', (req,res) => {
     
 });
 
+//login
+router.get('/login', (req,res) => {
+    if(req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }    
+    res.render('login.handlebars');
+});
+
 // GET single game
 router.get('/:guid', (req,res) => {
     axios.get('https://www.giantbomb.com/api/game/'+ req.params.guid + '/?api_key=' + process.env.API_KEY + '&format=json')
@@ -27,7 +36,12 @@ router.get('/:guid', (req,res) => {
             console.log(error);
         })
 });
-// login
+
+// GET comments and ratings
+router.get('/:id', (req,res) => {
+    
+})
+
 module.exports = router;
 
 
