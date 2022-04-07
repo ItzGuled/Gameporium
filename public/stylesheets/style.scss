@@ -66,9 +66,8 @@ body {
             font-weight: lighter;
         }
         .game-image {
-            margin-right: 0;
-            display: block;
-
+            max-width: 20rem;
+            max-height: 30rem;
         }
     }
 footer {
