@@ -3,6 +3,7 @@ async function commentRateFormHandler(event) {
   
     //will have to change this to reflect the part of the comment body
     const comment_text = document.querySelector('textarea[name="comment-section"]').value.trim();
+   
     //will have to change this to reflect the part of the rating body
     const rating = document.querySelector('#rating-id').value.trim();
     const game_id = window.location.toString().split('/')[
