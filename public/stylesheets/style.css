@@ -12,6 +12,9 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
 .site-header .title {
   font-size: 4rem;
   font-weight: bold;
