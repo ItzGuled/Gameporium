@@ -46,15 +46,16 @@ img {
 .login {
     grid-area: login;
     font-size: 1.5em;
+    display: flex;
+    justify-content: space-around;
     a {
         text-decoration: none;
         color: $accentColor;
+    } a:hover {
+        color: $textColor;
     }
     ul {
         list-style: none;
-    }
-    .login-signup:hover {
-        color: $textColor;
     }
     button, button:focus {
         outline: none;

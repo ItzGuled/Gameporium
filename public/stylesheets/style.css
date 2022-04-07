@@ -50,6 +50,11 @@ img {
 .login {
   grid-area: login;
   font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .login a {
@@ -57,12 +62,12 @@ img {
   color: #5cd85a;
 }
 
-.login ul {
-  list-style: none;
+.login a:hover {
+  color: #f5f5f5;
 }
 
-.login .login-signup:hover {
-  color: #f5f5f5;
+.login ul {
+  list-style: none;
 }
 
 .login button, .login button:focus {
