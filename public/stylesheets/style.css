@@ -12,9 +12,6 @@ body {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-}
 .site-header .title {
   font-size: 4rem;
   font-weight: bold;
@@ -58,11 +55,6 @@ a {
 }
 
 .game-container {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: #283044;
   color: #f5f5f5;
   border-radius: 1rem;
@@ -82,20 +74,9 @@ a {
 }
 
 .game-container .game-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-right: 0;
+  display: block;
 }
-
-button {
-  font-weight: lighter;
-  padding: 1%;
-  color: white;
-  background-color:#5cd85a;
-  border-radius: 8px;
-}
-
 
 footer {
   background: #283044;

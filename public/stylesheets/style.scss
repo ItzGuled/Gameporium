@@ -44,7 +44,6 @@ body {
     font-size: 1.5em;
     a {
         text-decoration: none;
-        text-decoration: underline;
         color: $accentColor;
     }
     ul {
@@ -52,8 +51,6 @@ body {
     }
 }
 .game-container {
-        flex-wrap: wrap;
-        justify-content: center;
         background: $secondaryColor;
         color: $textColor;
         border-radius: 1rem;
@@ -69,8 +66,9 @@ body {
             font-weight: lighter;
         }
         .game-image {
-            display: flex;
             margin-right: 0;
+            display: block;
+
         }
     }
 footer {
