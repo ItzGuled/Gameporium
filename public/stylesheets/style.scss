@@ -96,34 +96,32 @@ img {
         margin: 1rem;
         width: auto;
         min-height: 20rem;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas: "title image"
-                             "desc  image";
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
+
+        @media (min-width: 45em) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         .game-title {
             font-size: 3rem;
             font-weight: bold;
             color: $accentColor;
-            grid-area: title;
         }
+
         .game-description {
             font-size: 2rem;
             font-weight: lighter;
-            grid-area: desc;
         }
+
         .game-image {
-            max-width: 25rem;
-            max-height: 15rem;
-            margin: 0.5rem 0.5rem;
-            grid-area: image;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            img {
-                object-fit: contain;
-                max-height: 100%;
+            align-self: center;
+            text-align: center;
+            flex-shrink: 0;
+            @media (min-width: 45em) {
+                width: MIN(30%, 25rem);
             }
         }
     }
