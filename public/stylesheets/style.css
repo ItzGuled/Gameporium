@@ -166,6 +166,41 @@ img {
   max-height: 100%;
 }
 
+.singlepost {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: auto;
+}
+
+.singlepost h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5cd85a;
+}
+
+.singlepost h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #5cd85a;
+}
+
+.singlepost p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #f5f5f5;
+}
+
 .comment-container {
   text-align: center;
 }
