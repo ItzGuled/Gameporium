@@ -10,10 +10,10 @@
     </div>
 
     <div>
-    {{#each comments as |comment|}}
+    {{#each post}}
         <div class="comment-container">        
-         <p> {{{comment}}} </p>
-         <p> {{{rating}}} </p>             
+         <p> {{post.comment_text}} </p>
+         <p> {{post.rating}} </p>             
         </div>
     {{/each}}   
     </div>
@@ -39,6 +39,6 @@
             </div>
         </form>
     </div>
+</div>
 
-
-     <script src="/javascript/comment.js"></script>
+<script src="/javascript/comment.js"></script>
