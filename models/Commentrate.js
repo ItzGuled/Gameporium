@@ -23,7 +23,7 @@ Commentrate.init(
       }
     },
     game_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     rating: {
