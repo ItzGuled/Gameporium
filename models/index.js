@@ -11,8 +11,7 @@ User.hasMany(Commentrate, {
 });
 
 Commentrate.belongsTo(User, {
-  foreignKey: "user_id",
-  onDelete: "SET NULL"
+    foreignKey: "user_id"
 });
 // User.hasMany(Comment, {
 //   foreignKey: "user_id",
