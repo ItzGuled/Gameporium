@@ -18,8 +18,8 @@
                 <a href="/"class="title">Gameporium🎮<span class="subtitle">User Game Review Website</span></a>
                 <div class="login">
                     <ul>
-                        <li><a href="/login">Login/Signup</a></li>                        
-                        <li><button id="logout">Logout</button></li>
+                        <a href="/login">Login/Signup</a>                        
+                        <button id="logout">Logout</button>
                     </ul>
                 </div>
             </div>
@@ -27,7 +27,9 @@
         <section>
             {{{body}}}
         </section>
-        {{!-- <script src="./assets/js/script.js"></script> --}}
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
         <footer>
             <span class="created-by">&copy; Created by: </br></span>
             Stephanie Anderson </br>

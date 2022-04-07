@@ -9,7 +9,7 @@ router.get('/', (req,res) => {
     axios.get('https://www.giantbomb.com/api/games/?api_key=f69140845ff4d02155385c0b54aa36d12f51108f&format=json&limit=100&sort=original_release_date:desc&platforms=pc')
         .then(function(response) {              
             const games = response.data.results;      
-            res.render('homepage', { games });
+            res.render('homepage', { games, loggedIn: req.session.loggedIn });
             
         }).catch(function(error) {
             console.log(error);
@@ -32,10 +32,10 @@ router.get('/:guid', (req,res) => {
         .then(function(response) {
             const game = response.data.results
             Commentrate.findOne({
-                attributes: ['comment_text', 'rating', 'created_at'],
                 where: {
                     game_id: req.params.guid
                 },
+                attributes: ['comment_text', 'rating', 'created_at'],
                 include: [
                     {
                         model: User,
@@ -43,15 +43,19 @@ router.get('/:guid', (req,res) => {
                     }
                 ]
             }).then(function(dbCommentData) {
-                if(!dbPostData) {
-                    res.status(404).json({ message: 'No post found with this id' });
+                if(!dbCommentData) {
+                    // res.status(404).json({ message: 'No post found with this id' });
+                    res.render('single-post', { game, loggedIn: req.session.loggedIn });
                     return;
+                } else {
+                    // serialize the data
+                    const post = dbCommentData.get({ plain: true });
+                    res.render('single-post', { game, dbCommentData, loggedIn: req.session.loggedIn });
                 }
 
-                // serialize the data
-                const post = dbPostData.get({ plain: true });
+                
             })
-            res.render('single-post', { game });
+            
         }).catch(function(error) {
             console.log(error);
         })
@@ -59,7 +63,7 @@ router.get('/:guid', (req,res) => {
 
 // GET comments and ratings
 router.get('/:id', (req,res) => {
-    Commentrate
+    // Commentrate
 })
 
 module.exports = router;
