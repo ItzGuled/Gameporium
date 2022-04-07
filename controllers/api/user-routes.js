@@ -84,7 +84,7 @@ router.post('/login', (req,res) => {
             res.status(400).json({ message: 'Incorrect password!' });
             return;
         }
-    
+        console.log(dbUserData, 'we have a valid user login')
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
@@ -108,7 +108,7 @@ router.post('/logout', (req,res) => {
 })
 
 // PUT /api/users/1
-router.put('/:id', (req,res) => {
+router.put('/:id', withAuth, (req,res) => {
     // expects {username: <>, email: <>, passwprd: <>}
     User.update(req.body, {
         individualHooks:true,
@@ -128,7 +128,7 @@ router.put('/:id', (req,res) => {
 })
 
 // DELETE /api/users/1
-router.delete('/:id', (req,res) => {
+router.delete('/:id', withAuth, (req,res) => {
     User.destroy({
         where: {
             id: req.params.id
