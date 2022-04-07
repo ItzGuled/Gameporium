@@ -19,7 +19,7 @@
             </div> 
         {{/each}}          
     </div>
-
+    {{#if loggedIn}}
     <div class="comment-container">
         <form class="comment-page">
             <div>
@@ -41,6 +41,7 @@
             </div>
         </form>
     </div>
+    {{/if}}
 </div>
 
 <script src="/javascript/comment.js"></script>

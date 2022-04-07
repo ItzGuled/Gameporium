@@ -1,26 +1,30 @@
 async function loginFormHandler(event) {
-  event.preventDefault();
+  // event.preventDefault();
 
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
-
+  
+  console.log('triggered email and PW')
   if (email && password) {
     const response = await fetch('api/users/login', {
       method: 'post',
       body: JSON.stringify({
         email,
-        password,
+        password
       }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+      headers: { 'Content-Type': 'application/json' }
+    })
 
     if (response.ok) {
+      console.log(response);
       document.location.replace('/');
     } else {
+      console.log('not logged in')
       alert(response.statusText);
     }
   }
 }
+
 
 async function signupFormHandler(event) {
   event.preventDefault();
@@ -51,6 +55,8 @@ async function signupFormHandler(event) {
   }
 }
 
-document.querySelector('.login').addEventListener('submit', loginFormHandler);
+
+document.querySelector('.login-btn').addEventListener('click', loginFormHandler);
+
 
 document.querySelector('.signup').addEventListener('submit', signupFormHandler);
