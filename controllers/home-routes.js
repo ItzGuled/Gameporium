@@ -6,8 +6,8 @@ const axios = require('axios');
 
 //GET all games on the front-end
 router.get('/', (req,res) => {
-    axios.get('https://www.giantbomb.com/api/games/?api_key=f69140845ff4d02155385c0b54aa36d12f51108f&limit=100&format=json')
-    // https://www.giantbomb.com/api/games/?api_key=f69140845ff4d02155385c0b54aa36d12f51108f&limit=50&sort=original_release_date&format=json
+    axios.get('https://www.giantbomb.com/api/games/?api_key=' + process.env.API_KEY + '&limit=100&format=json')
+    // https://www.giantbomb.com/api/games/?api_key=' + process.env.API_KEY + '&limit=50&sort=original_release_date&format=json
         .then(function(response) {              
             const games = response.data.results;      
             res.render('homepage', { games, loggedIn: req.session.loggedIn });
