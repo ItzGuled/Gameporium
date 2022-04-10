@@ -10,6 +10,7 @@ SO THAT I can rate which games I liked compared to the reviews.
 https://morning-lowlands-91275.herokuapp.com/
 
 ## Screenshot
+![screenshot](/public/images/screenshot_gameporium.jpg?raw=true)
 
 ### Credits
 * Stephanie Anderson
