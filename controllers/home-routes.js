@@ -49,8 +49,7 @@ router.get('/:guid', (req,res) => {
                     // res.status(404).json({ message: 'No post found with this id' });
                     res.render('single-post', { game, loggedIn: req.session.loggedIn });
                     return;
-                } else {                    
-                    console.log('we have comments!!', dbCommentData)                   
+                } else {                                   
                     res.render('single-post', { game, dbCommentData, loggedIn: req.session.loggedIn });
                 }                
             })
